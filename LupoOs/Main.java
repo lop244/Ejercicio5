@@ -1,7 +1,7 @@
 package LupoOs.controlador;
 
 import LupoOs.modelo.*;
-import LupoOs.vista.Vista;
+import LupoOs.vista.Vista;x
 /**
  * Clase principal que actúa como Controlador en el patrón MVC.
  * Orquesta la interacción entre el Modelo (SistemaOperativo) y la Vista.
