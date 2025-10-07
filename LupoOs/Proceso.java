@@ -25,4 +25,12 @@ public class Proceso {
      */
     public abstract String ejecutar();
 
+// Override del método toString para mostrar información básica del proceso.
+    @Override
+    public String toString() {
+        return "Proceso [PID=" + pid + ", Nombre='" + nombre + "']";
+    }
+}
+
+
 
