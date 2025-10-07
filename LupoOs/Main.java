@@ -43,4 +43,10 @@ public class Main {
             vista.mostrarMensaje("Tipo de proceso no válido.");
             return; // Usamos return para salir del método si la opción es inválida
         }
+        
+        String[] datos = vista.solicitarDatosComunesProceso();
+        try {
+            int pid = Integer.parseInt(datos[0]);
+            String nombre = datos[1];
+            Proceso nuevoProceso = null;
 
