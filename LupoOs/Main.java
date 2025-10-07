@@ -20,3 +20,18 @@ public class Main {
         while (corriendo) {
             vista.mostrarMenu();
             int opcion = vista.obtenerOpcionUsuario();
+
+            if (opcion == 1) {
+                gestionarCreacionProceso();
+            } else if (opcion == 2) {
+                String log = modelo.ejecutarProcesos();
+                vista.mostrarMensaje(log);
+            } else if (opcion == 3) {
+                corriendo = false;
+                vista.mostrarMensaje("Saliendo del simulador. ¡Hasta pronto!");
+            } else {
+                vista.mostrarMensaje("Opción no válida. Por favor, intente de nuevo.");
+            }
+        }
+    }
+
