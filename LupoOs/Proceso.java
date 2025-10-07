@@ -8,3 +8,12 @@ public class Proceso {
         this.pid = pid;
         this.nombre = nombre;
 }
+
+// Getters
+    public int getPid() {
+        return pid;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
