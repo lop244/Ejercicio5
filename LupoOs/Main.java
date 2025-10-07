@@ -1,15 +1,12 @@
-package LupoOs.controlador;
+package LupoOs.controlador; 
 
-import LupoOs.modelo.*;
-import LupoOs.vista.Vista;
-/**
- * Clase principal que actúa como Controlador en el patrón MVC.
- * Orquesta la interacción entre el Modelo (SistemaOperativo) y la Vista.
- */
+import LupoOs.modelo.*;      
+import LupoOs.vista.Vista;    
+
 public class Main {
     private SistemaOperativo modelo;
     private Vista vista;
-    
+
     public Main() {
         this.modelo = new SistemaOperativo();
         this.vista = new Vista();
@@ -37,11 +34,10 @@ public class Main {
 
     private void gestionarCreacionProceso() {
         int tipoProceso = vista.solicitarTipoProceso();
-
-        // Valida el tipo de proceso antes de continuar
+        
         if (tipoProceso < 1 || tipoProceso > 3) {
             vista.mostrarMensaje("Tipo de proceso no válido.");
-            return; // Usamos return para salir del método si la opción es inválida
+            return;
         }
 
         String[] datos = vista.solicitarDatosComunesProceso();
@@ -62,6 +58,7 @@ public class Main {
                 modelo.agregarProceso(nuevoProceso);
                 vista.mostrarMensaje("¡Proceso '" + nombre + "' registrado exitosamente!");
             }
+
         } catch (NumberFormatException e) {
             vista.mostrarMensaje("Error: El PID debe ser un número entero.");
         }
