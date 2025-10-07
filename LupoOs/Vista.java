@@ -6,5 +6,7 @@ import java.util.Scanner;
 
 public class Vista {
     private Scanner scanner;
-    
+
+    public Vista() {
+        this.scanner = new Scanner(System.in);
 }
