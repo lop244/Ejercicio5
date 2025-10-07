@@ -3,11 +3,12 @@ package LupoOs.vista;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-// La clase que el usuario verá e interactuará con, es decir entrada y salida de datos
+// Clase que maneja toda la interacción con el usuario (entrada y salida de datos).
+// Es el único lugar donde se utiliza System.out y Scanner.
 
 public class Vista {
     private Scanner scanner;
-}
+
     public Vista() {
         this.scanner = new Scanner(System.in);
     }
@@ -44,7 +45,7 @@ public class Vista {
         mostrarMensaje("Seleccione un tipo: ");
         return obtenerOpcionUsuario();
     }
-
+    
     public String[] solicitarDatosComunesProceso() {
         String[] datos = new String[2];
         mostrarMensaje("Ingrese el PID (identificador numérico): ");
