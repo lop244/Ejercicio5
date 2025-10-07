@@ -6,6 +6,7 @@ public class ProcesoDaemon extends Proceso {
         super(pid, nombre);
 }
 
+// Simula un servicio continuo
 @Override
 public string ejecutar() {
     return "[DAEMON] PID " + getPid() + " (" + getNombre() + "): Servicio de monitoreo activo y en ejecución.";
