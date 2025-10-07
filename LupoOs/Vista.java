@@ -45,5 +45,14 @@ public class Vista {
         return obtenerOpcionUsuario();
     }
 
-
-
+    public String[] solicitarDatosComunesProceso() {
+        String[] datos = new String[2];
+        mostrarMensaje("Ingrese el PID (identificador numérico): ");
+        datos[0] = scanner.nextLine();
+        
+        mostrarMensaje("Ingrese el nombre del proceso (ej. 'Compilador GCC'): ");
+        datos[1] = scanner.nextLine();
+        
+        return datos;
+    }
+}
