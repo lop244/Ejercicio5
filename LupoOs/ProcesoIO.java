@@ -6,6 +6,7 @@ public class ProcesoIO extends Proceso {
 }
 @Override
 public String ejecutar() {
+ // Simula una espera por un dispositivo
         return "[I/O] PID " + getPid() + " (" + getNombre() + "): Esperando respuesta del disco duro. Completado.";
     }
 }
