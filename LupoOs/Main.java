@@ -43,10 +43,28 @@ public class Main {
             vista.mostrarMensaje("Tipo de proceso no válido.");
             return; // Usamos return para salir del método si la opción es inválida
         }
-        
+
         String[] datos = vista.solicitarDatosComunesProceso();
         try {
             int pid = Integer.parseInt(datos[0]);
             String nombre = datos[1];
             Proceso nuevoProceso = null;
+
+            if (tipoProceso == 1) {
+                nuevoProceso = new ProcesoCPU(pid, nombre);
+            } else if (tipoProceso == 2) {
+                nuevoProceso = new ProcesoIO(pid, nombre);
+            } else if (tipoProceso == 3) {
+                nuevoProceso = new ProcesoDaemon(pid, nombre);
+            }
+            
+            if (nuevoProceso != null) {
+                modelo.agregarProceso(nuevoProceso);
+                vista.mostrarMensaje("¡Proceso '" + nombre + "' registrado exitosamente!");
+            }
+        } catch (NumberFormatException e) {
+            vista.mostrarMensaje("Error: El PID debe ser un número entero.");
+        }
+    }
+
 
