@@ -23,4 +23,6 @@ public class Proceso {
      * Cada tipo de proceso concreto deberá implementar su propia lógica.
      * return Un String que describe el resultado de la ejecución.
      */
+    public abstract String ejecutar();
+
 
