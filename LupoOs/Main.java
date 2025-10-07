@@ -9,3 +9,8 @@ import vista.Vista;
 public class Main {
     private SistemaOperativo modelo;
     private Vista vista;
+    
+    public Main() {
+        this.modelo = new SistemaOperativo();
+        this.vista = new Vista();
+    }
