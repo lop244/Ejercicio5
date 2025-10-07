@@ -1,4 +1,4 @@
-package LupoOs;
+package LupoOs.modelo;
 
 public class Proceso {
     
