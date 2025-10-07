@@ -37,3 +37,10 @@ public class Main {
 
     private void gestionarCreacionProceso() {
         int tipoProceso = vista.solicitarTipoProceso();
+
+        // Valida el tipo de proceso antes de continuar
+        if (tipoProceso < 1 || tipoProceso > 3) {
+            vista.mostrarMensaje("Tipo de proceso no válido.");
+            return; // Usamos return para salir del método si la opción es inválida
+        }
+
