@@ -14,3 +14,9 @@ public class Main {
         this.modelo = new SistemaOperativo();
         this.vista = new Vista();
     }
+
+    public void iniciar() {
+        boolean corriendo = true;
+        while (corriendo) {
+            vista.mostrarMenu();
+            int opcion = vista.obtenerOpcionUsuario();
