@@ -5,6 +5,12 @@ import java.util.ArrayList;
 public class SistemaOperativo {
     private Arraylist<Proceso> procesos;
 
-    pubi
+    public SistemaOperativo() {
+        this.procesos = new ArrayList<>();
+    }
+
+    public void agregarProceso(Proceso proceso) {
+        this.procesos.add(proceso);
+    }
     
 }
