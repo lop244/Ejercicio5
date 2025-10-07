@@ -18,4 +18,11 @@ public class SistemaOperativo {
             return "No hay procesos en la cola de ejecución.";
         }
 
+        StringBuilder logEjecucion = new StringBuilder("--- INICIANDO EJECUCIÓN DE PROCESOS ---\n");
+        for (Proceso p : procesos) {
+            logEjecucion.append(p.ejecutar()).append("\n");
+        }
+        logEjecucion.append("--- TODOS LOS PROCESOS HAN SIDO EJECUTADOS ---\n");
+
+
 }
