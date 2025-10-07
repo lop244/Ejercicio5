@@ -36,4 +36,14 @@ public class Vista {
         }
     }
 
+    public int solicitarTipoProceso() {
+        mostrarMensaje("\n--- ¿Qué tipo de proceso desea crear? ---");
+        mostrarMensaje("1. Proceso de CPU (Cálculo intensivo)");
+        mostrarMensaje("2. Proceso de I/O (Entrada/Salida)");
+        mostrarMensaje("3. Proceso Daemon (Servicio en segundo plano)");
+        mostrarMensaje("Seleccione un tipo: ");
+        return obtenerOpcionUsuario();
+    }
+
+
 
