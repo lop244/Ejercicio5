@@ -12,5 +12,10 @@ public class SistemaOperativo {
     public void agregarProceso(Proceso proceso) {
         this.procesos.add(proceso);
     }
-    
+
+    public String ejecutarProcesos() {
+        if (procesos.isEmpty()) {
+            return "No hay procesos en la cola de ejecución.";
+        }
+
 }
