@@ -67,4 +67,8 @@ public class Main {
         }
     }
 
-
+    public static void main(String[] args) {
+        Main controlador = new Main();
+        controlador.iniciar();
+    }
+}
