@@ -24,5 +24,6 @@ public class SistemaOperativo {
         }
         logEjecucion.append("--- TODOS LOS PROCESOS HAN SIDO EJECUTADOS ---\n");
 
-
+        return logEjecucion.toString();
+    }
 }
