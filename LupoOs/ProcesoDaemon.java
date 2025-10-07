@@ -1,5 +1,7 @@
-package LupoOs;
+package LupoOs.modelo;
 
-public class ProcesoDaemon {
+public class ProcesoDaemon extends Proceso {
+
+
     
 }
